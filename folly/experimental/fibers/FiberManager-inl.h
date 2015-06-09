@@ -454,7 +454,7 @@ T& FiberManager::local() {
 
 template <typename T>
 T& FiberManager::localThread() {
-  static thread_local T t;
+  static FOLLY_TLS T t;
   return t;
 }
 
